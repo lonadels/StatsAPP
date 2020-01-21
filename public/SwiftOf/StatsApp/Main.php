@@ -9,6 +9,7 @@ use SwiftOf\StatsApp\Results\ResultSuccess;
 /**
  * @author SwiftSoft
  * @method void result(Result $result)
+ * @method void checkArgs(string|array $needle)
  */
 class Main
 {
@@ -29,7 +30,7 @@ class Main
                 break;
 
             case "getToken":
-                if (! $this->checkArgs(['username', 'password']) ) return $this->result(new ResultError(2));
+                if (!$this->checkArgs(['username', 'password'])) return $this->result(new ResultError(2));
                 $res = VKAPI::getToken($this->args['username'], $this->args['password']);
                 if (isset($res->error)) return $this->result(new ResultError(-1));
                 $this->result(new ResultSuccess($res));

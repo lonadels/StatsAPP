@@ -1,14 +1,14 @@
 {
-  "name": "StatsAPP",
+  "name": "statsapp",
   "version": "1.0.0",
-  "description": "",
+  "description": "статистика диалогов ВК",
   "main": "index.js",
   "scripts": {
     "start": "cross-env PORT=10888 react-scripts start",
     "build": "react-scripts build"
   },
   "keywords": [],
-  "author": "",
+  "author": "SwiftSoft",
   "license": "MIT",
   "devDependencies": {
     "cross-env": "^5.2.1",

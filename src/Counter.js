@@ -1,14 +1,14 @@
 
 import { observable, action } from 'mobx';
 
-export default class Counter {
+export default new class Counter {
   @observable count = 0;
 
   @action increase = () => {
-    this.counter = ++this.count;
+    return ++this.count;
   }
 
   @action decrease = () => {
-    this.counter = --this.count;
+    return --this.count;
   }
 }

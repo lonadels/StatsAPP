@@ -14,7 +14,7 @@ const App = observer(props => {
     <Root>
       <View>
         <Panel>
-          <h1>{count}</h1>
+          <h1>Count: {count}</h1>
           <Button onClick={increase}>Inc</Button>
           <Button onClick={decrease}>Dec</Button>
         </Panel>

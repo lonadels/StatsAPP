@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.js": "/StatsAPP/static/js/main.e5bcaf9f.chunk.js",
+    "main.js.map": "/StatsAPP/static/js/main.e5bcaf9f.chunk.js.map",
+    "runtime-main.js": "/StatsAPP/static/js/runtime-main.19c6297f.js",
+    "runtime-main.js.map": "/StatsAPP/static/js/runtime-main.19c6297f.js.map",
+    "static/css/2.2cfa1b23.chunk.css": "/StatsAPP/static/css/2.2cfa1b23.chunk.css",
+    "static/js/2.c6329142.chunk.js": "/StatsAPP/static/js/2.c6329142.chunk.js",
+    "static/js/2.c6329142.chunk.js.map": "/StatsAPP/static/js/2.c6329142.chunk.js.map",
+    "index.html": "/StatsAPP/index.html",
+    "precache-manifest.2bdda902dda65866f07ce7555c6e097e.js": "/StatsAPP/precache-manifest.2bdda902dda65866f07ce7555c6e097e.js",
+    "service-worker.js": "/StatsAPP/service-worker.js",
+    "static/css/2.2cfa1b23.chunk.css.map": "/StatsAPP/static/css/2.2cfa1b23.chunk.css.map",
+    "static/js/2.c6329142.chunk.js.LICENSE": "/StatsAPP/static/js/2.c6329142.chunk.js.LICENSE"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.19c6297f.js",
+    "static/css/2.2cfa1b23.chunk.css",
+    "static/js/2.c6329142.chunk.js",
+    "static/js/main.e5bcaf9f.chunk.js"
+  ]
+}

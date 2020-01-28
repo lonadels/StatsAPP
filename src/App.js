@@ -1,40 +1,26 @@
-import React, { useState, useEffect } from 'react';
+import React, { Component } from 'react';
+
 import connect from '@vkontakte/vk-connect';
-import { ConfigProvider, Root, View, Panel, ScreenSpinner } from '@vkontakte/vkui';
+import { ConfigProvider, Root, View, Panel, Button } from '@vkontakte/vkui';
 import '@vkontakte/vkui/dist/vkui.css';
 
-const App = () => {
-	const [fetchedUser, setUser] = useState(null);
-	const [popout, setPopout] = useState(<ScreenSpinner size='large' />);
+import { observer } from 'mobx-react'
+import Counter from './Counter';
 
-	useEffect(() => {
-		connect.subscribe(({ detail: { type, data } }) => {
-			if (type === 'VKWebAppUpdateConfig') {
-				const schemeAttribute = document.createAttribute('scheme');
-				schemeAttribute.value = data.scheme ? data.scheme : 'client_light';
-				document.body.attributes.setNamedItem(schemeAttribute);
-			}
-		});
-		async function fetchData() {
-			const user = await connect.send('VKWebAppGetUserInfo');
-			setUser(user);
-			setPopout(null);
-		}
-		fetchData();
-	}, []);
+const App = observer(props => {
+  const { count, increase, decrease } = Counter;
 
-	return (
-		<ConfigProvider>
-			<Root popout={popout}>
-				<View >
-					<Panel>
-
-					</Panel>
-				</View>
-			</Root>
-		</ConfigProvider>
-	);
-}
+  return <ConfigProvider>
+    <Root>
+      <View>
+        <Panel>
+          <h1>{count}</h1>
+          <Button onClick={increase}>Inc</Button>
+          <Button onClick={decrease}>Dec</Button>
+        </Panel>
+      </View>
+    </Root>
+  </ConfigProvider>
+})
 
 export default App;
-
